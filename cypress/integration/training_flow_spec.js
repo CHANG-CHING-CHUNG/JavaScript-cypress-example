@@ -45,7 +45,7 @@ describe('Running a whole training operation', () => {
         mineType:"image/jpeg"
       }
     )
-    // cy.get("button#upload").click({force:true})
+    cy.get("button#upload").click({force:true})
   })
 
   it("Train models", () => {
