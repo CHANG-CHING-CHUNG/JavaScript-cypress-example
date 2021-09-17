@@ -5,6 +5,9 @@
     "password":"168168",
     "layer_mapping_url":"/front_linetype_map",
     "training_data_management_url":"/train_dataset_mgt_view",
-    "model_training_url":"/model_training"
+    "model_training_url":"/model_training",
+    "batch_size":12,
+    "learning_rate":0.001,
+    "epochs":10
   }
 }

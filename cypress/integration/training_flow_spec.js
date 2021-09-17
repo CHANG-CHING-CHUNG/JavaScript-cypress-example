@@ -51,6 +51,14 @@ describe('Running a whole training operation', () => {
   it("Train models", () => {
     
     cy.login(username,password)
-    cy.visit(Cypress.env("training_data_management_url"))
+    cy.visit(Cypress.env("model_training_url"))
+    cy.get("input#busniess_office").type("test-john",{force: true})
+    cy.get("input#name_date").type("2021-09-17",{force: true})
+    cy.get("input#name_type").type("test-john",{force:true})
+    cy.get("select#layer_selector").select("g3").should("have.value","g3")
+    cy.get("input#batch_size").clear({force: true}).type(Cypress.env("batch_size"),{force: true})
+    cy.get("input#learning_rate").clear({force: true}).type(Cypress.env("learning_rate"),{force: true})
+    cy.get("input#epochs").clear({force: true}).type(Cypress.env("epochs"),{force: true})
+    cy.get("button#new_job").click({force: true})
   })
 })
